@@ -9,9 +9,9 @@ app = Flask(__name__)
 CORS(app)
 
 product = {
-    "ID" : {0, 1, 2, 3},
-    "Price" : {150.99, 100.99, 120.99, 200.99},
-    "Name" : {"Volkswagen", "LandRover", "Peugeot", "Skoda"}
+    "ID" : [0, 1, 2, 3],
+    "Price" : [150.99, 100.99, 120.99, 200.99],
+    "Name" : ["Volkswagen", "LandRover", "Peugeot", "Skoda"],
 }
 
 @app.route("/", methods=["GET"])
