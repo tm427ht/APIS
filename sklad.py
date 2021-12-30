@@ -5,7 +5,7 @@ from flask_cors import CORS
 import mysql.connector as MYSQL
 
 sklad = Flask(__name__)
-CORS(app)
+CORS(sklad)
 
 ovocie = ["jablko", "pomaranc", "jahoda"]
 
