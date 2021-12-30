@@ -16,7 +16,7 @@ product = {
 
 @app.route("/", methods=["GET"])
 def main():
-    return jsonify({"ovocie":ovocie}),200
+    return jsonify({"product":product}),200
 
 @app.route("/vytvorit", methods=["POST"])
 def create():
