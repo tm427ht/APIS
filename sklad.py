@@ -4,7 +4,7 @@ from flask import jsonify
 from flask_cors import CORS
 import mysql.connector as MYSQL
 
-app = Flask(__name__)
+sklad = Flask(__name__)
 CORS(app)
 
 ovocie = ["jablko", "pomaranc", "jahoda"]
@@ -33,5 +33,5 @@ def delete(id):
     return jsonify("deleted"), 204
 
 if __name__ == "__main__": 
-    app.run
+    sklad.run
 
