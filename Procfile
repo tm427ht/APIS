@@ -1,1 +1,1 @@
-web: gunicorn app:sklad
+web: gunicorn app:app
