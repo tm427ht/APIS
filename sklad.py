@@ -9,25 +9,25 @@ CORS(sklad)
 
 ovocie = ["jablko", "pomaranc", "jahoda"]
 
-@app.route("/", methods = ["GET"])
+@sklad.route("/", methods = ["GET"])
 def main(): 
     return jsonify({"ovocie": ovocie}), 200
 
-@app.route("/vytvorit", methods = ["POST"])
+@sklad.route("/vytvorit", methods = ["POST"])
 def create(): 
     data = request.get_json(force = True)
     data_dict = dict(data)
     ovocie.append(data_dict["vytvorit"])
     return jsonify("created"), 201
 
-@app.route("/upravit/<id>", methods = ["PUT"])
+@sklad.route("/upravit/<id>", methods = ["PUT"])
 def update(id):
     data = request.get_json(force = True)
     data_dict = dict(data)
     ovocie[int(id)] = data_dict["upravit"]
     return jsonify("update"), 201
 
-@app.route("/vymazat/<id>", methods = ["DELETE"])
+@sklad.route("/vymazat/<id>", methods = ["DELETE"])
 def delete(id): 
     del ovocie[int(id)]
     return jsonify("deleted"), 204
